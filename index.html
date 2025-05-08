@@ -37,6 +37,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      flex-wrap: wrap;
     }
 
     header .logo {
@@ -50,13 +51,19 @@
     }
 
     header h1 {
-      font-size: 2.0rem;
+      font-size: 2rem;
       font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
     }
 
     nav a {
       color: white;
-      margin-left: 2rem;
+      margin-left: 1rem;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
@@ -92,8 +99,9 @@
       font-size: 1.75rem;
     }
 
-    p {
+    p, li {
       margin-bottom: 1rem;
+      font-size: 1rem;
     }
 
     form input, form textarea {
@@ -123,7 +131,7 @@
     iframe {
       border: 0;
       width: 100%;
-      height: 300px;
+      height: 250px;
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
@@ -146,99 +154,151 @@
       font-size: 0.9rem;
     }
 
+    #hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    #hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    #hero a {
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    #hero a:hover {
+      background: #007a3d;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
       }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
       nav {
-        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
       }
+
       nav a {
-        display: inline-block;
-        margin: 0.5rem 1rem 0.5rem 0;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      form input, form textarea, form button {
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+
+      iframe {
+        height: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-          <img src="logopn.png" alt="Logo" />
-          <h1>PAGARNUSA UNUSIA</h1>
-        </div>
-        <nav>
-          <a href="#home">Beranda</a>
-          <a href="#about">Tentang</a>
-          <a href="#sejarah">Sejarah</a>
-          <a href="#bottom-section">Kontak</a>
-        </nav>
-      </header>
-      <section id="hero" style="text-align: center; padding: 2rem 1rem;">
-        <img src="ukt.PNG" alt="Banner PAGARNUSA" style="max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
-        <br>
-        <a href="https://forms.gle/wj9aHKfvwYUdQaM67" style="background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s ease;">
-          Daftar di sini
-        </a>
-      </section>
-      
-      <main>
-        <section id="home">
-          <h2>Profil</h2>
-          <p>Pencak Silat Nahdlatul Ulama Pagar Nusa (PSNU Pagar Nusa)...</p>
-          <p>PSNU PAGAR NUSA berdiri sebagai badan otonom...</p>
-        </section>
-      
-        <section id="about">
-          <h2>Tentang Kami</h2>
-          <p>PAGARNUSA UNUSIA berdiri sebagai wadah kaderisasi bela diri mahasiswa...</p>
-        </section>
-      
-        <section id="sejarah">
-          <h2>Sejarah Singkat PSNU Pagar Nusa</h2>
-          <p><strong>Pencak Silat Nahdlatul Ulama (PSNU) Pagar Nusa</strong> lahir dari kegelisahan para ulama dan pendekar NU atas belum adanya wadah resmi bagi perguruan pencak silat di lingkungan Nahdlatul Ulama. Gagasan pembentukan organisasi ini dicetuskan oleh <strong>Drs. KH. Muhammad Nur Aziz</strong>, pendekar asal Ponorogo.</p>
-          <p>Pertemuan pertama dilaksanakan pada <strong>27 September 1985</strong> di Pondok Pesantren Tebuireng, Jombang. Dilanjutkan dengan pertemuan kedua pada <strong>3 Januari 1986</strong> di Pondok Pesantren Lirboyo, Kediri, yang menghasilkan nama awal <strong>IPSNU</strong> dan mengangkat <strong>KH. Abdullah Maksum Jauhari</strong> sebagai Ketua Umum pertama.</p>
-          <p>Pada <strong>20 Maret 1986</strong>, nama organisasi berubah menjadi <strong>IPSNU Pagar Nusa</strong>, singkatan dari "Pagarnya Nahdlatul Ulama dan Bangsa", dan secara resmi disahkan oleh PWNU Jawa Timur pada <strong>26 Maret 1986</strong>. PBNU meresmikan Pagar Nusa sebagai lembaga NU pada <strong>16 Juli 1986</strong>.</p>
-          <p>Perjalanan selanjutnya:</p>
-          <ul>
-            <li><strong>1991:</strong> Munas I di Probolinggo</li>
-            <li><strong>1994:</strong> Ditetapkan sebagai Badan Otonom pada Muktamar Cipasung</li>
-            <li><strong>1999:</strong> Kembali menjadi lembaga (Muktamar Lirboyo)</li>
-            <li><strong>2001:</strong> Munas II di TMII Jakarta dibuka oleh Presiden KH. Abdurrahman Wahid</li>
-            <li><strong>2004:</strong> Resmi kembali sebagai Badan Otonom di Muktamar Boyolali</li>
-          </ul>
-          <p>Saat ini, Pagar Nusa terus berkembang sebagai garda pelestarian pencak silat dan penguatan tradisi serta keamanan di tengah masyarakat NU.</p>
-        </section>
-      
-        <section id="bottom-section">
-          <div class="contact-box">
-            <h2>Hubungi Kami</h2>
-            <form>
-              <input type="text" placeholder="Nama Lengkap" required />
-              <input type="email" placeholder="Alamat Email" required />
-              <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
-              <button type="submit">Kirim</button>
-            </form>
-          </div>
-      
-          <div class="map-box">
-            <h2>Alamat Sekretariat</h2>
-            <p>Lokasi Sekretariat PAGARNUSA UNUSIA:</p>
-            <iframe 
-              src="https://maps.app.goo.gl/jPmbGDn3jpruUsM66?g_st=com.google.maps.preview.copy" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </section>
-      </main>
-      
+  <header>
+    <div class="logo">
+      <img src="logopn.png" alt="Logo" />
+      <h1>PAGARNUSA UNUSIA</h1>
+    </div>
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#sejarah">Sejarah</a>
+      <a href="#bottom-section">Kontak</a>
+    </nav>
+  </header>
 
-<footer>
-  &copy; 2025 PAGARNUSA UNUSIA. Dibuat dengan semangat juang dan teknologi.
-</footer>
+  <section id="hero">
+    <img src="ukt.PNG" alt="Banner PAGARNUSA">
+    <br>
+    <a href="https://forms.gle/wj9aHKfvwYUdQaM67">Daftar di sini</a>
+  </section>
+
+  <main>
+    <section id="home">
+      <h2>Profil</h2>
+      <p>Pencak Silat Nahdlatul Ulama Pagar Nusa (PSNU Pagar Nusa)...</p>
+      <p>PSNU PAGAR NUSA berdiri sebagai badan otonom...</p>
+    </section>
+
+    <section id="about">
+      <h2>Tentang Kami</h2>
+      <p>PAGARNUSA UNUSIA berdiri sebagai wadah kaderisasi bela diri mahasiswa...</p>
+    </section>
+
+    <section id="sejarah">
+      <h2>Sejarah Singkat PSNU Pagar Nusa</h2>
+      <p><strong>Pencak Silat Nahdlatul Ulama (PSNU) Pagar Nusa</strong> lahir dari kegelisahan para ulama dan pendekar NU atas belum adanya wadah resmi bagi perguruan pencak silat di lingkungan Nahdlatul Ulama. Gagasan pembentukan organisasi ini dicetuskan oleh <strong>Drs. KH. Muhammad Nur Aziz</strong>, pendekar asal Ponorogo.</p>
+      <p>Pertemuan pertama dilaksanakan pada <strong>27 September 1985</strong> di Pondok Pesantren Tebuireng, Jombang...</p>
+      <ul>
+        <li><strong>1991:</strong> Munas I di Probolinggo</li>
+        <li><strong>1994:</strong> Ditetapkan sebagai Badan Otonom pada Muktamar Cipasung</li>
+        <li><strong>1999:</strong> Kembali menjadi lembaga (Muktamar Lirboyo)</li>
+        <li><strong>2001:</strong> Munas II di TMII Jakarta dibuka oleh Presiden KH. Abdurrahman Wahid</li>
+        <li><strong>2004:</strong> Resmi kembali sebagai Badan Otonom di Muktamar Boyolali</li>
+      </ul>
+      <p>Saat ini, Pagar Nusa terus berkembang sebagai garda pelestarian pencak silat dan penguatan tradisi serta keamanan di tengah masyarakat NU.</p>
+    </section>
+
+    <section id="bottom-section">
+      <div class="contact-box">
+        <h2>Hubungi Kami</h2>
+        <form>
+          <input type="text" placeholder="Nama Lengkap" required />
+          <input type="email" placeholder="Alamat Email" required />
+          <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+
+      <div class="map-box">
+        <h2>Alamat Sekretariat</h2>
+        <p>Lokasi Sekretariat PAGARNUSA UNUSIA:</p>
+        <iframe 
+          src="https://maps.app.goo.gl/jPmbGDn3jpruUsM66?g_st=com.google.maps.preview.copy" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 PAGARNUSA UNUSIA. Dibuat dengan semangat juang dan teknologi.
+  </footer>
 
 </body>
 </html>
