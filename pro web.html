@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAGARNUSA UNUSIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #006633;
+      --light: #f4f4f4;
+      --dark: #1f1f1f;
+      --accent: #00994d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--primary);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 2.0rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #caffd3;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #007a3d;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    #bottom-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .contact-box, .map-box {
+      flex: 1 1 300px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 1rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0.5rem 1rem 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="logopn.png" alt="Logo" />
+          <h1>PAGARNUSA UNUSIA</h1>
+        </div>
+        <nav>
+          <a href="#home">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#sejarah">Sejarah</a>
+          <a href="#bottom-section">Kontak</a>
+        </nav>
+      </header>
+      <section id="hero" style="text-align: center; padding: 2rem 1rem;">
+        <img src="ukt.PNG" alt="Banner PAGARNUSA" style="max-width: 50%; height: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 1.5rem;">
+        <br>
+        <a href="https://forms.gle/wj9aHKfvwYUdQaM67" style="background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s ease;">
+          Daftar di sini
+        </a>
+      </section>
+      
+      <main>
+        <section id="home">
+          <h2>Profil</h2>
+          <p>Pencak Silat Nahdlatul Ulama Pagar Nusa (PSNU Pagar Nusa)...</p>
+          <p>PSNU PAGAR NUSA berdiri sebagai badan otonom...</p>
+        </section>
+      
+        <section id="about">
+          <h2>Tentang Kami</h2>
+          <p>PAGARNUSA UNUSIA berdiri sebagai wadah kaderisasi bela diri mahasiswa...</p>
+        </section>
+      
+        <section id="sejarah">
+          <h2>Sejarah Singkat PSNU Pagar Nusa</h2>
+          <p><strong>Pencak Silat Nahdlatul Ulama (PSNU) Pagar Nusa</strong> lahir dari kegelisahan para ulama dan pendekar NU atas belum adanya wadah resmi bagi perguruan pencak silat di lingkungan Nahdlatul Ulama. Gagasan pembentukan organisasi ini dicetuskan oleh <strong>Drs. KH. Muhammad Nur Aziz</strong>, pendekar asal Ponorogo.</p>
+          <p>Pertemuan pertama dilaksanakan pada <strong>27 September 1985</strong> di Pondok Pesantren Tebuireng, Jombang. Dilanjutkan dengan pertemuan kedua pada <strong>3 Januari 1986</strong> di Pondok Pesantren Lirboyo, Kediri, yang menghasilkan nama awal <strong>IPSNU</strong> dan mengangkat <strong>KH. Abdullah Maksum Jauhari</strong> sebagai Ketua Umum pertama.</p>
+          <p>Pada <strong>20 Maret 1986</strong>, nama organisasi berubah menjadi <strong>IPSNU Pagar Nusa</strong>, singkatan dari "Pagarnya Nahdlatul Ulama dan Bangsa", dan secara resmi disahkan oleh PWNU Jawa Timur pada <strong>26 Maret 1986</strong>. PBNU meresmikan Pagar Nusa sebagai lembaga NU pada <strong>16 Juli 1986</strong>.</p>
+          <p>Perjalanan selanjutnya:</p>
+          <ul>
+            <li><strong>1991:</strong> Munas I di Probolinggo</li>
+            <li><strong>1994:</strong> Ditetapkan sebagai Badan Otonom pada Muktamar Cipasung</li>
+            <li><strong>1999:</strong> Kembali menjadi lembaga (Muktamar Lirboyo)</li>
+            <li><strong>2001:</strong> Munas II di TMII Jakarta dibuka oleh Presiden KH. Abdurrahman Wahid</li>
+            <li><strong>2004:</strong> Resmi kembali sebagai Badan Otonom di Muktamar Boyolali</li>
+          </ul>
+          <p>Saat ini, Pagar Nusa terus berkembang sebagai garda pelestarian pencak silat dan penguatan tradisi serta keamanan di tengah masyarakat NU.</p>
+        </section>
+      
+        <section id="bottom-section">
+          <div class="contact-box">
+            <h2>Hubungi Kami</h2>
+            <form>
+              <input type="text" placeholder="Nama Lengkap" required />
+              <input type="email" placeholder="Alamat Email" required />
+              <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+              <button type="submit">Kirim</button>
+            </form>
+          </div>
+      
+          <div class="map-box">
+            <h2>Alamat Sekretariat</h2>
+            <p>Lokasi Sekretariat PAGARNUSA UNUSIA:</p>
+            <iframe 
+              src="https://maps.app.goo.gl/jPmbGDn3jpruUsM66?g_st=com.google.maps.preview.copy" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </section>
+      </main>
+      
+
+<footer>
+  &copy; 2025 PAGARNUSA UNUSIA. Dibuat dengan semangat juang dan teknologi.
+</footer>
+
+</body>
+</html>
